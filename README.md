@@ -17,64 +17,31 @@ medusa-storefront/       → Frontend Storefront (e.g. Next.js)
 ```
 
 ---
+## 🧪 Running Locally (Using `yarn`)
 
-## 🚀 Running Locally
-
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/youruser/medusa-ecommerce-template.git
-cd medusa-ecommerce-template
-```
-
-### 2. Install Dependencies (from root)
-
-```bash
-pnpm install
-```
-
-### 3. Setup `.env` files
-
-#### 🔧 Backend: `medusa-template/.env`
-
-```env
-NODE_ENV=development
-DATABASE_URL=postgresql://<user>:<pass>@<host>/<db>?sslmode=require
-JWT_SECRET=supersecret
-COOKIE_SECRET=supersecret
-CORS=http://localhost:3000
-ADMIN_CORS=http://localhost:7000
-```
-
-#### 🔧 Frontend: `medusa-storefront/.env.local`
-
-```env
-NEXT_PUBLIC_MEDUSA_BACKEND_URL=http://localhost:9000
-```
-
-> ⚠️ Replace with your actual DB connection string (e.g. from NeonDB or Railway).
-
----
-
-### 4. Run Backend (Medusa)
+### 🔧 Backend (Medusa)
 
 ```bash
 cd medusa-template
-pnpm dev
+yarn install        # install dependencies
+yarn build          # optional if using TypeScript
+yarn start          # starts the Medusa server
 ```
 
-By default runs at: [http://localhost:9000](http://localhost:9000)
+This runs the Medusa backend on: [http://localhost:9000](http://localhost:9000)
 
 ---
 
-### 5. Run Frontend (Storefront)
+### 🖥️ Frontend (Storefront)
 
 ```bash
-cd ../medusa-storefront
-pnpm dev
+cd medusa-storefront
+yarn install        # install dependencies
+yarn build          # builds the frontend
+yarn start          # starts the Next.js server
 ```
 
-By default runs at: [http://localhost:3000](http://localhost:3000)
+This runs the Storefront on: [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -133,11 +100,11 @@ After seeding (or manually creating a user):
 ```bash
 # Seed Medusa data (optional)
 cd medusa-template
-pnpm medusa seed
+yarn run seed
 
 # Build Storefront
 cd ../medusa-storefront
-pnpm build
+yarn run build
 ```
 
 ---
@@ -148,3 +115,5 @@ pnpm build
 - [Railway Docs](https://docs.railway.app)
 
 ---
+
+
