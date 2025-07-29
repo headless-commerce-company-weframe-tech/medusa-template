@@ -1,0 +1,6 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "yarn install && yarn build"
+
+[start]
+cmd = "yarn start"
