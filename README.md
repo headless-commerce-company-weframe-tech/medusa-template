@@ -123,8 +123,8 @@ NEXT_PUBLIC_MEDUSA_BACKEND_URL=https://<your-backend>.railway.app
 
 After seeding (or manually creating a user):
 
-- **Email**: `admin@demo.com`
-- **Password**: `password`
+- **Email**: `admin@medusajs.com`
+- **Password**: `supersecret`
 
 ---
 
